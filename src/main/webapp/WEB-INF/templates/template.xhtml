@@ -4,24 +4,32 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
-	<title>Spring + JSF2 Demo Application</title>
+	<title>Movistar Campañas</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<h:outputStylesheet name="css/screen.css" />
+	<!-- <h:outputStylesheet name="css/screen.css" /> -->
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="resources/js/jquery-2.0.3.min.js"></script>
+	<script src="resources/js/bootstrap.min.js"></script>
+
 </h:head>
 <h:body>
-	<h:panelGroup id="page" layout="block">
-		<h:panelGroup id="header" layout="block">
-			<h1>Spring + JSF2 Demo Application</h1>
+
+
+	<h:panelGroup class="row-fluid" id="page" layout="block">
+		<h:panelGroup class="col-md-12" id="header" layout="block">
+			<h1>Movistar campañas</h1>
 		</h:panelGroup>
-		<h:panelGroup id="container" layout="block">
-			
+		<h:panelGroup class="col-md-12" id="container" layout="block">
 			<h:panelGroup id="content" layout="block">
 				<ui:insert name="content">Main Content</ui:insert>
 			</h:panelGroup>
 		</h:panelGroup>
-		<h:panelGroup id="footer" layout="block">www.sivalabs.in
+		<h:panelGroup class="col-md-12" id="footer" layout="block">www.movistar.com.pe
 		</h:panelGroup>
 	</h:panelGroup>
+
+
+
 
 </h:body>
 </html>

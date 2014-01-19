@@ -1,0 +1,91 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/template.xhtml">
+
+	<ui:define name="content">
+		<p:panel columns="1">
+			<h:form id="form">
+
+				<p:growl id="msgs" showDetail="true" />
+
+				<p:dataTable id="submotivos" var="submotivo" value="#{tematicoController.submotivos}">
+
+					<p:column headerText="cod_motivo">
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="cod_submotivo">
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="id_codres" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="cod_res" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="descripcion_resultado" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="id_motivo" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="motivo" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="id_submotivo" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="submotivo" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="residencial" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="negocios" >
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+
+					<p:column style="width:4%">
+						<p:commandButton id="selectButton" update=":form:display"
+							oncomplete="PF('submotiboDialog').show()" icon="ui-icon-search"
+							title="View">
+							<f:setPropertyActionListener value="#{submotivo}"
+								target="#{tematicoController.selectedSubmotivo}" />
+						</p:commandButton>
+					</p:column>
+
+				</p:dataTable>
+
+				<p:dialog header="Detalle submotivo" widgetVar="submotiboDialog"
+					resizable="false" id="submotivoDlg" showEffect="fade"
+					hideEffect="explode" modal="true">
+
+					<h:panelGrid id="display" columns="2" cellpadding="4"
+						style="margin:0 auto;">
+
+						
+
+						<!-- <h:outputText value="Year:" />
+						<h:outputText value="#{tableBean.selectedCar.year}"
+							style="font-weight:bold" />
+
+
+						<h:outputText value="Manufacturer:" />
+						<h:outputText value="#{tableBean.selectedCar.manufacturer}"
+							style="font-weight:bold" />
+
+						<h:outputText value="Color:" />
+						<h:outputText value="#{tableBean.selectedCar.color}"
+							style="font-weight:bold" /> -->
+
+					</h:panelGrid>
+
+				</p:dialog>
+
+			</h:form>
+
+		</p:panel>
+	</ui:define>
+</ui:composition>
