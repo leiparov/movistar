@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sivalabs.springjsfjpa.services;
+package com.movistar.springjsfjpa.services;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.sivalabs.springjsfjpa.entities.User;
-import com.sivalabs.springjsfjpa.repositories.UserRepository;
+import com.movistar.springjsfjpa.entities.User;
+import com.movistar.springjsfjpa.repositories.UserRepository;
 
 /**
  * @author Siva

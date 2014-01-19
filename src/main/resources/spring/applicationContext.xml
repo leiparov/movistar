@@ -16,7 +16,7 @@
 	
 	<context:annotation-config />
 
-	<context:component-scan base-package="com.sivalabs.springjsfjpa" />
+	<context:component-scan base-package="com.movistar.springjsfjpa" />
 
 	<context:property-placeholder location="classpath:application.properties" />
 	

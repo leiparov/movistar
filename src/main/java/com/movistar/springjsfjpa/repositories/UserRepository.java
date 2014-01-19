@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.sivalabs.springjsfjpa.repositories;
+package com.movistar.springjsfjpa.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sivalabs.springjsfjpa.entities.User;
+import com.movistar.springjsfjpa.entities.User;
 
 /**
  * @author Siva

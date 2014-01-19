@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.sivalabs.springjsfjpa.entities.User;
-import com.sivalabs.springjsfjpa.services.UserService;
+import com.movistar.springjsfjpa.entities.User;
+import com.movistar.springjsfjpa.services.UserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:spring/applicationContext.xml")

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>.::.Movistar.::.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link type="image/x-icon" href="../resources/img/iconos/favicon.ico"
+		rel="icon" />
+	<link href="resources/css/bootstrap.min.css" rel="stylesheet" />
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</h:head>
+<h:body>
+	<div class="row-fluid">
+		<!-- Encabezado -->
+		<div class="col-md-12 well">
+			<!-- <h:graphicImage id="image" url="../resources/img/fondos/logo.jpg">
+			</h:graphicImage> -->
+			<p class="text-primary"> <h1> Movistar Campañas</h1> </p>
+		</div>
+
+		<!-- Cuerpo -->
+		<div class="row-fluid">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h:form styleClass="form-horizontal">
+					<p:panel id="panel" header="Login">
+						<p:growl for="alertas" id="mensajes" showDetail="true"
+							sticky="true" life="4000" />
+						<div class="control-group">
+							<label class="control-label" for="usuario">Usuario</label>
+							<div class="controls">
+								<p:inputText type="text" id="usuario"
+									value="#{loginController.user}"
+									requiredMessage="usuario requerido" />
+								<p:message for="usuario" />
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="password">Password</label>
+							<div class="controls">
+								<p:password id="password" required="true"
+									requiredMessage="password requerido"
+									value="#{loginController.password}" />
+								<p:message for="password" />
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<p:commandButton id="loginb" value="Ingresar"
+									action="#{loginController.login}" update="panel, mensajes" />
+							</div>
+						</div>
+					</p:panel>
+				</h:form>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+
+		<!-- Pie de Página -->
+		<div class="col-md-12" style="text-align: center">
+			<small>Telefónica móviles S.A.<br></br>
+			</small>
+		</div>
+
+
+	</div>
+</h:body>
+</html>

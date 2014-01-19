@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sivalabs.springjsfjpa.web;
+package com.movistar.springjsfjpa.web;
 
 import java.util.List;
 
@@ -11,13 +11,9 @@ import javax.faces.bean.SessionScoped;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.sivalabs.springjsfjpa.entities.User;
-import com.sivalabs.springjsfjpa.services.UserService;
+import com.movistar.springjsfjpa.entities.User;
+import com.movistar.springjsfjpa.services.UserService;
 
-/**
- * @author Siva
- *
- */
 @ManagedBean
 @SessionScoped
 @Component
