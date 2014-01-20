@@ -11,39 +11,43 @@
 
 				<p:growl id="msgs" showDetail="true" />
 
-				<p:dataTable id="submotivos" var="submotivo" value="#{tematicoController.submotivos}">
+				<p:dataTable id="submotivos" var="submotivo"
+					value="#{tematicoController.submotivos}">
+
+					<p:column headerText="cod_res">
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="descripcion_resultado">
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
 
 					<p:column headerText="cod_motivo">
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column>
+					<p:column headerText="motivo">
 						<h:outputText value="#{submotivo.codigo}" />
 					</p:column>
 					<p:column headerText="cod_submotivo">
 						<h:outputText value="#{submotivo.codigo}" />
 					</p:column>
-					<p:column headerText="id_codres" >
+					<!-- <p:column headerText="id_codres">
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column> -->
+
+					<!-- <p:column headerText="id_motivo">
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column> -->
+
+					<!-- <p:column headerText="id_submotivo">
+						<h:outputText value="#{submotivo.codigo}" />
+					</p:column> -->
+					<p:column headerText="submotivo">
 						<h:outputText value="#{submotivo.codigo}" />
 					</p:column>
-					<p:column headerText="cod_res" >
+					<p:column headerText="residencial">
 						<h:outputText value="#{submotivo.codigo}" />
 					</p:column>
-					<p:column headerText="descripcion_resultado" >
-						<h:outputText value="#{submotivo.codigo}" />
-					</p:column>
-					<p:column headerText="id_motivo" >
-						<h:outputText value="#{submotivo.codigo}" />
-					</p:column>
-					<p:column headerText="motivo" >
-						<h:outputText value="#{submotivo.codigo}" />
-					</p:column>
-					<p:column headerText="id_submotivo" >
-						<h:outputText value="#{submotivo.codigo}" />
-					</p:column>
-					<p:column headerText="submotivo" >
-						<h:outputText value="#{submotivo.codigo}" />
-					</p:column>
-					<p:column headerText="residencial" >
-						<h:outputText value="#{submotivo.codigo}" />
-					</p:column>
-					<p:column headerText="negocios" >
+					<p:column headerText="negocios">
 						<h:outputText value="#{submotivo.codigo}" />
 					</p:column>
 
@@ -65,7 +69,7 @@
 					<h:panelGrid id="display" columns="2" cellpadding="4"
 						style="margin:0 auto;">
 
-						
+
 
 						<!-- <h:outputText value="Year:" />
 						<h:outputText value="#{tableBean.selectedCar.year}"
@@ -87,5 +91,31 @@
 			</h:form>
 
 		</p:panel>
+
+		<p:panel columns="1">
+			<h:form>
+
+				<!-- <p:commandButton value="Select Car" icon="ui-icon-extlink"
+					actionListener="#{dialogBean.chooseCar}">
+					<p:ajax event="dialogReturn" listener="#{dialogBean.onCarChosen}"
+						update="growl" />
+				</p:commandButton> -->
+				<p:commandButton id="showDialogNuevoResultado"
+					value="Nuevo Resultado" actionListener="#{tematicoController.nuevoMotivo}" />
+				<p:commandButton id="showDialogNuevoMotivo" type="button"
+					value="Nuevo motivo" />
+				<p:commandButton id="showDialogNuevoSubmotivo" type="button"
+					value="Nuevo Submotivo" />
+
+			</h:form>
+
+
+		</p:panel>
+
+		<p:dialog id="dlgNuevoMotivo">
+
+
+		</p:dialog>
+
 	</ui:define>
 </ui:composition>

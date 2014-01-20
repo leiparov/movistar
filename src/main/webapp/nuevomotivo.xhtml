@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Nuevo motivo</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/resources/css/bootstrap.min.css" />
+	<script src="resources/js/jquery-2.0.3.min.js"></script>
+	<script src="resources/js/bootstrap.min.js"></script>
+	<script type='text/javascript'>
+		jQuery.noConflict();
+	</script>
+</h:head>
+
+<h:body>
+	<h:form>
+		<p:panelGrid columns="2">
+			<h:outputLabel>Resultado</h:outputLabel>
+			<p:selectOneMenu value="#{motivoController.resultado}"
+				style="width:250px">
+
+
+				<f:selectItem itemLabel="Seleccione ..." itemValue="0" />
+				<f:selectItems value="#{tematicoController.resultados}" var="res"
+					itemLabel="#{res.descripcion}" itemValue="#{res.id}" />
+
+				<!-- <f:selectItem itemLabel="Contacto efectivo" itemValue="CEF" />
+				<f:selectItem itemLabel="Contacto no efectivo" itemValue="CNE" />
+				<f:selectItem itemLabel="No contacto" itemValue="NOC" />
+				<f:selectItem itemLabel="No gestionado" itemValue="NOG" /> -->
+			</p:selectOneMenu>
+
+			<h:outputLabel>Motivo</h:outputLabel>
+			<p:inputText value="#{motivoController.descripcion}" />
+
+
+		</p:panelGrid>
+
+		<p:separator></p:separator>
+
+		<p:commandButton value="GUARDAR" 
+			actionListener="#{motivoController.guardarMotivo}" />
+
+	</h:form>
+</h:body>
+
+</html>

@@ -12,10 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.movistar.springjsfjpa.entities.User;
 import com.movistar.springjsfjpa.repositories.UserRepository;
 
-/**
- * @author Siva
- *
- */
 @Service
 @Transactional
 public class UserService 

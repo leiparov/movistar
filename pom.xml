@@ -34,7 +34,7 @@
 		<commons.lang.version>2.5</commons.lang.version>
 
 		<jsf.version>2.1.10</jsf.version>
-		<primefaces.version>3.4</primefaces.version>
+		<primefaces.version>4.0</primefaces.version>
 		<primefaces-theme.version>1.0.8</primefaces-theme.version>
 
 		<servlet.version>2.5</servlet.version>
